@@ -1,0 +1,53 @@
+{
+  "name": "vscode-open-in-npmx",
+  "displayName": "Open in npmx.dev",
+  "version": "1.0.0",
+  "description": "Open the current selection, project, or arbitrary string, in npmx.dev",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "extension",
+    "in",
+    "npmx",
+    "open",
+    "vsc",
+    "vscode"
+  ],
+  "repository": "github:sybers/vscode-open-in-npmx",
+  "publisher": "sybers",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "npm run build:dev && npm run debug",
+    "prod": "npm run build:prod && npm run debug",
+    "debug": "code --extensionDevelopmentPath $PWD --inspect-extensions 9222",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "build:dev": "tsup --sourcemap",
+    "build:prod": "tsup --minify",
+    "package": "vsce package",
+    "prepublishOnly": "npm run build:prod",
+    "vscode:prepublish": "npm run build:prod"
+  },
+  "dependencies": {
+    "vscode-extras": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.87.0",
+    "oxfmt": "^0.28.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "open-in-npmx.open",
+        "title": "Open in npmx.dev"
+      }
+    ]
+  },
+  "icon": "resources/logo-128x128.png",
+  "engines": {
+    "vscode": "^1.87.0"
+  }
+}
