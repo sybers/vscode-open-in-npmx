@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "vscode-open-in-npmx",
   "displayName": "Open in npmx.dev",
   "version": "1.0.0",
@@ -16,11 +17,11 @@
   ],
   "repository": "github:sybers/vscode-open-in-npmx",
   "publisher": "sybers",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "scripts": {
     "dev": "npm run build:dev && npm run debug",
     "prod": "npm run build:prod && npm run debug",
-    "debug": "code --extensionDevelopmentPath $PWD --inspect-extensions 9222",
+    "debug": "cursor --extensionDevelopmentPath $PWD --inspect-extensions 9222",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "build:dev": "tsup --sourcemap",

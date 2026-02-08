@@ -6,7 +6,7 @@ import {
   getPackagesFromEditor,
   getPackagesFromProject,
   getPackagesFromPrompt,
-} from "./utils";
+} from "./utils.js";
 
 const NPMX_PACKAGE_URL = "https://npmx.dev/package/";
 
