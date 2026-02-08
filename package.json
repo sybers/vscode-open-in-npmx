@@ -2,7 +2,7 @@
   "type": "module",
   "name": "vscode-open-in-npmx",
   "displayName": "Open in npmx.dev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open the current selection, project, or arbitrary string, in npmx.dev",
   "categories": [
     "Other"
